@@ -101598,7 +101598,7 @@ a9(){return new A.a2N()}}
 A.a2N.prototype={
 au(){this.aI()},
 J(a){var s=null,r=this.gdT().dn($.b4L(),t.aq)
-return new A.z2($.b4K(),r,new A.aFC(),"Restaurant App - "+"development".toUpperCase(),A.AG(B.DW,s,s,B.h9,s),!1,s)}}
+return new A.z2($.b4K(),r,new A.aFC(),"Restaurant App - "+"development".toUpperCase(),A.AG(B.DW,s,s,B.h9,s),!0,s)}}
 A.aFC.prototype={
 $2(a,b){b.toString
 return new A.HM(b,A.b([B.Fb,B.Fc,B.Fd,B.Fe],t.At),null,null,!1,!1,null)},
