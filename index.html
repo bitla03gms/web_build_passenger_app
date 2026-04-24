@@ -42,6 +42,28 @@
 
   <!---added code for ios web browser-->
 
+  <!--
+    SPA path restore for GitHub Pages.
+
+    Pairs with web/404.html. If the previous page was 404.html it encoded
+    the originally-requested path into `?p=/...&q=...`. Decode those back
+    into a normal pathname+search+hash and replaceState() so Flutter /
+    GoRouter boot at the intended URL instead of the repo root.
+  -->
+  <script>
+    (function(l) {
+      if (l.search[1] === '/') {
+        var decoded = l.search.slice(1).split('&').map(function (s) {
+          return s.replace(/~and~/g, '&');
+        }).join('?');
+        window.history.replaceState(
+          null, null,
+          l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    }(window.location));
+  </script>
+
 </head>
 <body>
   <script src="flutter_bootstrap.js" async></script>
