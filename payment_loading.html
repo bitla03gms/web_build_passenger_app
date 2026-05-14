@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Connecting to payment gateway...</title>
+  <style>
+    body { margin: 0; display: flex; align-items: center; justify-content: center; height: 100vh; font-family: sans-serif; background: #f5f5f5; }
+    .msg { color: #555; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <p class="msg">Connecting to payment gateway...</p>
+  <script>
+    // Signal opener that popup is ready to receive the payment HTML.
+    if (window.opener) {
+      try { window.opener.postMessage(JSON.stringify({ type: 'payment_popup_ready' }), '*'); } catch(e) {}
+    }
+    // Receive payment HTML from opener and render it.
+    window.addEventListener('message', function(e) {
+      try {
+        var d = (typeof e.data === 'string') ? JSON.parse(e.data) : e.data;
+        if (d && d.type === 'payment_html' && d.html) {
+          document.open();
+          document.write(d.html);
+          document.close();
+        }
+      } catch(err) {}
+    });
+  </script>
+</body>
+</html>
