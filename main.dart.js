@@ -109145,7 +109145,7 @@ A.aMf.prototype={
 $3(a,b,c){return this.a.UH()},
 $S:80}
 A.aMn.prototype={
-$0(){A.dz(this.a).jP(0,"/homePage",null)},
+$0(){A.dz(this.a).jP(0,"/paymentOptionsScreen",null)},
 $S:6}
 A.aMb.prototype={
 $3(a,b,c){return b},
