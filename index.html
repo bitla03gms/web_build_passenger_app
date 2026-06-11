@@ -14,7 +14,7 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="/">
+  <base href="/web_build_passenger_app/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -123,7 +123,8 @@
 
   <script>
     if (!self.crossOriginIsolated && 'serviceWorker' in navigator) {
-      navigator.serviceWorker.register('coi-serviceworker.js').then(function() {
+      var swUrl = new URL('coi-serviceworker.js', document.baseURI).href;
+      navigator.serviceWorker.register(swUrl).then(function() {
         window.location.reload();
       });
     }
