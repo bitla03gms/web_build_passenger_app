@@ -121,6 +121,14 @@
     <img src="icons/splash_logo.png" alt="Passenger App">
   </div>
 
+  <script>
+    if (!self.crossOriginIsolated && 'serviceWorker' in navigator) {
+      navigator.serviceWorker.register('coi-serviceworker.js').then(function() {
+        window.location.reload();
+      });
+    }
+  </script>
+
   <script src="flutter_bootstrap.js" async></script>
 
   <script>
