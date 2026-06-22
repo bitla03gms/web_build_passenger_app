@@ -31401,22 +31401,18 @@ bjs(a,b){var s,r,q,p,o,n,m=t.Xw.a(b.w)
 if(m==null){s=t.z
 m=A.r(s,s)}s=J.a6(m)
 r=A.kK(s.h(m,"fromActiveOrder"))
-q=r===!0
-p=b.b.gny().h(0,"api_url")
-if(p==null)p=""
-if(!q)r=p.length===0
-else r=!1
-if(r)p="https://jpsb-rms.ticketsimply.co.in/rms_shortened_url/3BAWIvySNpKP"
-r=s.h(m,"order_pnr")
-A.bJ(r==null?"":r)
-r=s.h(m,"restaurant_name")
-r=A.bJ(r==null?"":r)
+q=b.b.gny().h(0,"api_url")
+if(q==null)q=""
+p=s.h(m,"order_pnr")
+A.bJ(p==null?"":p)
+p=s.h(m,"restaurant_name")
+p=A.bJ(p==null?"":p)
 o=s.h(m,"route_text")
 o=A.bJ(o==null?"":o)
 n=s.h(m,"items_summary")
 n=A.bJ(n==null?"":n)
 s=s.h(m,"order_date_time")
-return new A.wU(r,o,n,A.bJ(s==null?"":s),q,p,null)},
+return new A.wU(p,o,n,A.bJ(s==null?"":s),r===!0,q,null)},
 wU:function wU(a,b,c,d,e,f,g){var _=this
 _.e=a
 _.f=b
@@ -31634,21 +31630,20 @@ l=k}q.aa5(new A.M6(n,B.Y0,m,l,null))
 q.So()
 return A.x(null,r)}})
 return A.y($async$aV1,r)},
-RG(){var s=0,r=A.z(t.H),q=1,p=[],o,n,m
+RG(){var s=0,r=A.z(t.H),q=1,p=[],o,n
 var $async$RG=A.A(function(a,b){if(a===1){p.push(b)
 s=q}for(;;)switch(s){case 0:q=3
 s=6
 return A.n(A.ayV(),$async$RG)
-case 6:o="https://restaurantsimply.com/web_build_passenger_app?api_url=https%3A%2F%2Fjpsb-rms.ticketsimply.co.in%2Frms_shortened_url%2FGVmHDlIRI3aI"
-s=7
-return A.n(A.M2(o),$async$RG)
+case 6:s=7
+return A.n(A.M2(null),$async$RG)
 case 7:s=8
 return A.n($.b_w().fK(0),$async$RG)
 case 8:q=1
 s=5
 break
 case 3:q=2
-m=p.pop()
+n=p.pop()
 s=5
 break
 case 2:s=1
@@ -36417,7 +36412,7 @@ $S:2}
 A.aSi.prototype={
 $1(a){var s=A.eC().b
 s=s==null?null:s.canvasKitBaseUrl
-return(s==null?"https://www.gstatic.com/flutter-canvaskit/052f31d115eceda8cbff1b3481fcde4330c4ae12/":s)+a},
+return(s==null?"https://www.gstatic.com/flutter-canvaskit/425cfb54d01a9472b3e81d9e76fd63a4a44cfbcb/":s)+a},
 $S:27}
 A.Xa.prototype={
 gu(a){var s=this.a
@@ -110385,7 +110380,7 @@ a9(){return new A.a66()}}
 A.a66.prototype={
 aq(){this.aH()},
 I(a){var s=null,r=this.gb6().bM($.bdd(),t.aq)
-return new A.AM($.bdc(),r,new A.aKT(),"Passenger App",A.Cz(B.ER,s,s,B.jc,s),!0,s)}}
+return new A.AM($.bdc(),r,new A.aKT(),"Passenger App",A.Cz(B.ER,s,s,B.jc,s),!1,s)}}
 A.aKT.prototype={
 $2(a,b){b.toString
 return new A.JQ(b,A.b([B.Go,B.Gp,B.Gq,B.Gr],t.At),null,null,!1,!1,null)},
